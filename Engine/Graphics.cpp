@@ -307,13 +307,47 @@ void Graphics::BeginFrame()
 	memset( pSysBuffer,0u,sizeof( Color ) * Graphics::ScreenHeight * Graphics::ScreenWidth );
 }
 
-void Graphics::PutPixel( int x,int y,Color c )
+void Graphics::PutPixel( int x, int y,Color c )
 {
 	assert( x >= 0 );
 	assert( x < int( Graphics::ScreenWidth ) );
 	assert( y >= 0 );
 	assert( y < int( Graphics::ScreenHeight ) );
 	pSysBuffer[Graphics::ScreenWidth * y + x] = c;
+}
+
+void Graphics::drawRect(int x, int y, int width, int height, Color c)
+{
+	int v_limit = y + height;
+	int h_limit = x + width;
+	for (int i = y; i < v_limit; i++) {
+		for (int j = x; j < h_limit; j++) {
+			PutPixel(j,i,c);
+		}
+	}
+}
+
+
+void Graphics::drawCircle(int x, int y, int radius, Color c)
+{
+	const int diameter = radius * 2;
+	const int radius_sqr = radius * radius;
+
+	const int x_init = x - radius;
+	const int y_init = y - radius;
+	const int x_limit = x + radius;
+	const int y_limit = y + radius;
+
+	for (int j = y_init; j < y_limit; j++) {
+		for (int i = x_init; i < x_limit; i++) {
+			const float x_sqrd_component = (i - x)*(i - x);
+			const float y_sqrd_component = (j - y)*(j - y);
+			if ((x_sqrd_component + y_sqrd_component) < float(radius_sqr)) {
+				PutPixel(i, j, c);
+			}
+		}
+	}
+
 }
 
 

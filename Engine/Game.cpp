@@ -42,4 +42,5 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+	gfx.drawCircle(300, 300, 5, Colors::Green);
 }
