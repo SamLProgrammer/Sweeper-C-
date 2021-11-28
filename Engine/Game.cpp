@@ -20,6 +20,7 @@
  ******************************************************************************************/
 #include "MainWindow.h"
 #include "Game.h"
+#include "Vec2DF.h"
 
 Game::Game( MainWindow& wnd )
 	:
@@ -42,5 +43,4 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
-	gfx.drawCircle(300, 300, 5, Colors::Green);
 }
