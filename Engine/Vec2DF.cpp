@@ -65,3 +65,13 @@ Vec2DF Vec2DF::getNormalized() const
 	}
 	return *this;
 }
+
+float Vec2DF::getX() const
+{
+	return x;
+}
+
+float Vec2DF::getY() const
+{
+	return y;
+}
