@@ -25,7 +25,8 @@
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
-	gfx( wnd )
+	gfx( wnd ),
+	board( 10 )
 {
 }
 
@@ -43,4 +44,5 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+	board.draw(spx, gfx);
 }

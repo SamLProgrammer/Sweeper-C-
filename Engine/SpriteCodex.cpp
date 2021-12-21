@@ -1,7 +1,7 @@
 #include "SpriteCodex.h"
 #include <assert.h>
 
-void SpriteCodex::DrawTile0(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile0(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -36,7 +36,7 @@ void SpriteCodex::DrawTile0(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile1(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile1(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -111,7 +111,7 @@ void SpriteCodex::DrawTile1(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile2(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile2(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -211,7 +211,7 @@ void SpriteCodex::DrawTile2(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile3(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile3(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -308,7 +308,7 @@ void SpriteCodex::DrawTile3(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile4(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile4(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -399,7 +399,7 @@ void SpriteCodex::DrawTile4(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile5(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile5(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -504,7 +504,7 @@ void SpriteCodex::DrawTile5(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile6(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile6(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -611,7 +611,7 @@ void SpriteCodex::DrawTile6(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile7(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile7(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -690,7 +690,7 @@ void SpriteCodex::DrawTile7(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTile8(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTile8(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -801,7 +801,7 @@ void SpriteCodex::DrawTile8(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(0 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTileButton(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTileButton(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 255, 255, 255);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 255, 255, 255);
@@ -913,7 +913,7 @@ void SpriteCodex::DrawTileButton(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(15 + pos.getX(), 15 + pos.getY(), 128, 128, 128);
 }
 
-void SpriteCodex::DrawTileCross(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTileCross(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(2 + pos.getX(), 2 + pos.getY(), 255, 0, 0);
 	gfx.PutPixel(3 + pos.getX(), 2 + pos.getY(), 255, 0, 0);
@@ -963,7 +963,7 @@ void SpriteCodex::DrawTileCross(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(14 + pos.getX(), 13 + pos.getY(), 255, 0, 0);
 }
 
-void SpriteCodex::DrawTileFlag(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTileFlag(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(7 + pos.getX(), 3 + pos.getY(), 255, 0, 0);
 	gfx.PutPixel(8 + pos.getX(), 3 + pos.getY(), 255, 0, 0);
@@ -1006,7 +1006,7 @@ void SpriteCodex::DrawTileFlag(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(11 + pos.getX(), 12 + pos.getY(), 0, 0, 0);
 }
 
-void SpriteCodex::DrawTileBomb(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTileBomb(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -1215,7 +1215,7 @@ void SpriteCodex::DrawTileBomb(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(11 + pos.getX(), 15 + pos.getY(), 178, 174, 173);
 }
 
-void SpriteCodex::DrawTileBombRed(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawTileBombRed(const Vec2DI& pos, Graphics& gfx)
 {
 	gfx.PutPixel(0 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
 	gfx.PutPixel(1 + pos.getX(), 0 + pos.getY(), 128, 128, 128);
@@ -1475,7 +1475,7 @@ void SpriteCodex::DrawTileBombRed(const Vec2DF& pos, Graphics& gfx)
 	gfx.PutPixel(15 + pos.getX(), 15 + pos.getY(), 255, 0, 0);
 }
 
-void SpriteCodex::DrawTileNumber(const Vec2DF& pos, int n, Graphics& gfx)
+void SpriteCodex::DrawTileNumber(const Vec2DI& pos, int n, Graphics& gfx)
 {
 	assert(n >= 0 && n <= 8);
 	switch (n)
@@ -1510,7 +1510,7 @@ void SpriteCodex::DrawTileNumber(const Vec2DF& pos, int n, Graphics& gfx)
 	}
 }
 
-void SpriteCodex::DrawWin(const Vec2DF& pos, Graphics& gfx)
+void SpriteCodex::DrawWin(const Vec2DI& pos, Graphics& gfx)
 {
 	// calculate top left corner based on input (center)
 	const int x = pos.getX() - 254 / 2;

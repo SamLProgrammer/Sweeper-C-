@@ -23,6 +23,8 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
+#include "Board.h"
+#include "SpriteCodex.h"
 //test
 class Game
 {
@@ -40,6 +42,8 @@ private:
 private:
 	MainWindow& wnd;
 	Graphics gfx;
+	SpriteCodex spx;
+	Board board;
 	/********************************/
 	/*  User Variables              */
 	/********************************/
