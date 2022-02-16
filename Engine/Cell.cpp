@@ -7,9 +7,28 @@ Cell::Cell(Vec2DI& in_board_position)
 
 }
 
+void Cell::open()
+{
+	state = State::Opened;
+}
+
+void Cell::mine()
+{
+	state = State::Mined;
+}
+
+boolean Cell::isMined()
+{
+	return state == State::Mined;
+}
+
 void Cell::draw(SpriteCodex& spx, Graphics& gfx)
 {
-	spx.DrawTileButton(getScreenPosition(), gfx);
+	if (state == State::Opened) {
+	}
+	else {
+		spx.DrawTileButton(getScreenPosition(), gfx);
+	}
 }
 
 int Cell::getWidth() const

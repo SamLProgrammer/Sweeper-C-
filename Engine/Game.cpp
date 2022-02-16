@@ -32,6 +32,10 @@ Game::Game( MainWindow& wnd )
 
 void Game::Go()
 {
+	if (wnd.mouse.Read().GetType() == Mouse::Event::LPress) {
+		int mouse_x = wnd.mouse.GetPosX();
+		int mouse_y = wnd.mouse.GetPosY();
+	}
 	gfx.BeginFrame();	
 	UpdateModel();
 	ComposeFrame();
