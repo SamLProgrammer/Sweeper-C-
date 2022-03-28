@@ -7,7 +7,7 @@ public:
 	Cell() = default;
 	Cell(Vec2DI& in_board_position);
 	enum class State {
-		Hidden, Opened, Flagged, Exploding, Mined
+		Hidden, Opened, Flagged, Exploding
 	};
 	void open();
 	void flag();
@@ -19,9 +19,10 @@ public:
 	int getX();
 	int getY();
 	Vec2DI getScreenPosition() const;
-private:
-	Vec2DI board_position;
 	static constexpr int width = SpriteCodex::tileSize;
 	static constexpr int height = SpriteCodex::tileSize;
+private:
+	boolean mined = false;
+	Vec2DI board_position;
 	State state = State::Hidden;
 };

@@ -14,20 +14,29 @@ void Cell::open()
 
 void Cell::mine()
 {
-	state = State::Mined;
+	mined = true;
 }
 
 boolean Cell::isMined()
 {
-	return state == State::Mined;
+	return mined;
 }
 
 void Cell::draw(SpriteCodex& spx, Graphics& gfx)
 {
-	if (state == State::Opened) {
-	}
-	else {
+	switch (state)
+	{
+	case Cell::State::Hidden:
 		spx.DrawTileButton(getScreenPosition(), gfx);
+		break;
+	case Cell::State::Opened:
+		break;
+	case Cell::State::Flagged:
+		break;
+	case Cell::State::Exploding:
+		break;
+	default:
+		break;
 	}
 }
 
