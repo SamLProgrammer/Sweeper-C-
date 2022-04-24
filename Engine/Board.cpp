@@ -7,6 +7,11 @@ Board::Board(int in_mines_amount)
 		cells[i] = Cell(mapIndex(i));
 	}
 	generateMines();
+	for (int i = 0; i < width_in_cells; i++) {
+		for (int j = 0; j < height_in_cells; j++) {
+			surroundingMines(i, j);
+		}
+	}
 }
 
 void Board::generateMines()
@@ -23,7 +28,6 @@ void Board::generateMines()
 }
 
 
-
 void Board::draw(SpriteCodex& spx, Graphics& gfx)
 {
 	for (int i = 0; i < cells_amount; i++) {
@@ -35,7 +39,29 @@ void Board::processClick(int x, int y)
 {
 	int x_cell = xScreenToCell(x);
 	int y_cell = yScreenToCell(y);
+	if (getCell(x_cell, y_cell).open()) {
+		spreadOpenning(x_cell, y_cell);
+	}
  }
+
+void Board::spreadOpenning(int x, int y) {
+
+	for (int i = x - 1; i < x + 2; i++) {
+
+		for (int j = y - 1; j < y + 2; j++) {
+
+			if (validPosition(i, j) && !getCell(i, j).isOpened()) {
+				getCell(i, j).open();
+				if (getCell(i, j).getSurroundingMines() == 0) {
+					spreadOpenning(i, j);
+				}
+			}
+
+		}
+
+	}
+}
+
 
 int Board::xScreenToCell(int in_x) {
 	return in_x/Cell::width;
@@ -43,6 +69,23 @@ int Board::xScreenToCell(int in_x) {
 
 int Board::yScreenToCell(int in_y) {
 	return in_y / Cell::height;
+}
+
+void Board::surroundingMines(int x, int y)
+{
+	Cell& cell = getCell(x, y);
+	int surrounding_mines = 0;
+	for (int i = x - 1; i < x + 2; i++) {
+		for (int j = y - 1; j < y + 2; j++) {
+			surrounding_mines = (validPosition(i,j) && getCell(i,j).isMined()) ? surrounding_mines + 1 : surrounding_mines;
+		}
+	}
+	cell.setSurroundingMines(surrounding_mines);
+}
+
+boolean Board::validPosition(int x, int y)
+{
+	return !( x < 0 || x > width_in_cells - 1 || y < 0 || y > height_in_cells - 1 );
 }
 
 Cell& Board::getCell(int x, int y)

@@ -9,10 +9,11 @@ public:
 	enum class State {
 		Hidden, Opened, Flagged, Exploding
 	};
-	void open();
+	boolean open();
+	boolean isMined();
+	boolean isOpened();
 	void flag();
 	void mine();
-	boolean isMined();
 	void draw(SpriteCodex& spx, Graphics& gfx);
 	int getWidth() const;
 	int getHeight() const;
@@ -21,8 +22,11 @@ public:
 	Vec2DI getScreenPosition() const;
 	static constexpr int width = SpriteCodex::tileSize;
 	static constexpr int height = SpriteCodex::tileSize;
+	void setSurroundingMines(int in_surrounding_mines);
+	int getSurroundingMines() const;
 private:
 	boolean mined = false;
 	Vec2DI board_position;
 	State state = State::Hidden;
+	int surrounding_mines = 0;
 };
